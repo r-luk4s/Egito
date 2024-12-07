@@ -1,0 +1,111 @@
+/* Estilos gerais para o corpo da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7a1414; /* Cor de fundo */
+    color: rgb(0, 0, 0);
+    font-family: "Bai Jamjuree", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima de 100% da tela */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container principal do conteúdo */
+main {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para os passos */
+.passo {
+    display: none; /* Inicialmente, escondemos os passos */
+    opacity: 0; /* Inicialmente, com transparência */
+    transition: opacity 0.6s ease-in-out; /* Transição suave */
+}
+
+/* Passo ativo que será mostrado */
+.passo.ativo {
+    display: block; /* Exibe o passo ativo */
+    opacity: 1; /* Torna o passo visível */
+}
+
+/* Estilo das imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo dos textos */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #000000; /* Cor de fundo verde */
+    color: white;
+    font-family: "Bai Jamjuree", sans-serif;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    background-color: #7a1414; /* Cor mais escura no hover */
+    transform: scale(1.1); /* Aumenta o tamanho do botão levemente */
+}
+
+/* Efeito de foco nos botões */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.5); /* Borda azul clara */
+}
+
+/* Estilo do botão de navegação */
+.botao-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    p {
+        font-size: 1.1rem; /* Diminui o tamanho da fonte para telas pequenas */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px 25px; /* Ajuste no tamanho do botão */
+    }
+
+    main {
+        padding: 15px;
+        border-radius: 8px;
+    }
+}
